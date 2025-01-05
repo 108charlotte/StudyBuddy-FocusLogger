@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", async function() {
     let runningFocusTimeEl = document.getElementById("running-focus-time-el");
     let totalFocusTimeEl = document.getElementById("total-focus-time-el");
 
-    let hours = 0; // Replace with actual session hours
-    let minutes = 0; // Replace with actual session minutes
-    let seconds = 0; // Replace with actual session seconds
+    chrome.storage.local.get(['session-hours', 'session-minutes', 'session-seconds'], function(result) {
+        let hours = result['session-hours'] || 0;
+        let minutes = result['session-minutes'] || 0;
+        let seconds = result['session-seconds'] || 0;
 
-    runningFocusTimeEl.textContent = `Session Duration: ${hours}h ${minutes}m ${seconds}s`;
+        runningFocusTimeEl.textContent = `Session Duration: ${hours}h ${minutes}m ${seconds}s`; 
+    });
 
     try {
         // Send a message to background.js to update the total time
