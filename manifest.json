@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3, 
+    "name": "StudyBuddy", 
+    "version": "1.24", 
+    "description": "A Chrome extension to help you focus and track your study sessions.",
+    "permissions": [
+        "storage"
+    ], 
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html", 
+        "default_icon": "StudyBuddy.png"
+    }
+}
