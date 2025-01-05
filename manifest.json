@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "StudyBuddy",
     "version": "1.0",
     "description": "A Chrome extension to help you focus on your study sessions.",
