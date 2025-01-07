@@ -8,6 +8,12 @@ app.get("/", (req, res) => {
     res.render("index", {text: "World"})
 })
 
+Router.post('/save-time', (req, res) => {
+    const { startTime, endTime } = req.body
+
+    if (!startTime || !endTime)
+})
+
 const userRouter = require("./routes/users")
 
 app.use("/users", userRouter)
