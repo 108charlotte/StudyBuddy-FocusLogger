@@ -1,1 +1,0 @@
-Thank you to Web Dev Simplified youtube channel! 

@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", async function() {
         runningFocusTimeEl.textContent = `Session Duration: ${hours}h ${minutes}m ${seconds}s`; 
     });
 
+    // chatgpt code to set up fetching from chrome extension
+    fetch('http://localhost:3000/api/time/save-time', {
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({ startTime, })
+    })
+
     try {
         // Send a message to background.js to update the total time
         await sendMessage("updateTotalTime");
