@@ -23,18 +23,15 @@ def create_database():
 def welcome():
     return render_template('index.html')
 
-@app.route('/login')
-def login(): 
-    return render_template('login.html')
-
-@app.route('/home', methods=["GET", "POST"])
-def home(): 
-    if request.method == 'GET': 
-        return render_template('index.html')
-    elif request.method == 'POST': 
-        return render_template('index.html')
-    
-
 # Run the application
 if __name__ == '__main__':
     app.run(debug=True)
+
+'''
+<li><a href="/login">Login</a></li>
+                    <li><a href="/register">Sign up</a></li>
+                    {%else%}
+                    <li><a href="/home">Login</a></li>
+                    <li><a href="/setup_instructions">Extension Setup Instructions</a></li>
+                    <li><a href="/extension_download">Extension Download</a></li>
+'''
