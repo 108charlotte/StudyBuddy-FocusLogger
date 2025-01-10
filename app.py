@@ -18,7 +18,7 @@ def create_database():
 # add new user: hashed_password = bcrypt.generate_password_hash('password').decode('utf-8')
 # check password for authentication: bcrypt.check_password_hash(hashed_password)
 
-# Define a basic route
+
 @app.route('/')
 def welcome():
     return render_template('index.html')
