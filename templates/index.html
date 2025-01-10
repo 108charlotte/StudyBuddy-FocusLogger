@@ -10,5 +10,27 @@
     </head>
     <body>
         <h1>StudyBuddy Home</h1>
+        <p id="quote">Insert inspirational quote here later</p>
+        <form autocomplete="on" action="/new_focus_session"method="POST">
+            <input target="_self" type="text" name="new_session_goal">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                    <th>Goal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for session in sessions%}
+                    <tr>
+                        <td>{{ session['start_time'] }}</td>
+                        <td>{{ session['duration'] }}</td>
+                        <td>{{ session['goal'] }}</td>
+                    </tr>
+            </tbody>
+        </table>
     </body>
 </html>
