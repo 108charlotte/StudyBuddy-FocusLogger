@@ -7,4 +7,4 @@ Includes a stopwatch which tracks time spent studying. There is a home screen th
 ** Please note that I started this project far before joining hack club so the hour-ish that shows for my project is NOT ACCURATE--this took A LOT OF TIME to code, especially since I am a beginner! 
 
 ## Credits
-I used A LOT of chatGPT on this one--I didn't actually know any javascript starting off so I just used a lot of tutorials, but when tutorials failed to address the errors I was seeing, I turned to chatGPT. 
+Since this is one of my first projects and first time using a lot of Javascript, I leveraged AI assistance such as ChatGPT to address errors. I also used online tutorials! 
